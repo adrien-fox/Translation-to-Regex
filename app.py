@@ -39,7 +39,7 @@ with col1:
         st.write("🇳🇱 NL 🇳🇱")
         st.code(str(word_1_NL).lower())
 
-    liste_1 = [word_1_FR.lower(), word_1_EN.lower(), word_1_ES.lower(), word_1_IT.lower(), word_1_DE.lower(), word_1_NL.lower()]
+    liste_1 = [unidecode(word_1_FR).lower(), word_1_EN.lower(), word_1_ES.lower(), word_1_IT.lower(), word_1_DE.lower(), word_1_NL.lower()]
 
     unique_liste_1 = list(set(liste_1))
 
