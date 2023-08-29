@@ -53,11 +53,11 @@ with col1:
 
 with colu2:
     word_2_FR = st.text_input("🇫🇷 FR Second Word 🇫🇷", value = "yaourt")
-    word_2_EN = GoogleTranslator(source = "fr", target = "en").translate(word_2_FR)
-    word_2_ES = GoogleTranslator(source = "fr", target = "es").translate(word_2_FR)
-    word_2_IT = GoogleTranslator(source = "fr", target = "it").translate(word_2_FR)
-    word_2_DE = GoogleTranslator(source = "fr", target = "de").translate(word_2_FR)
-    word_2_NL = GoogleTranslator(source = "fr", target = "nl").translate(word_2_FR)
+    word_2_EN = unidecode(GoogleTranslator(source = "fr", target = "en").translate(word_2_FR))
+    word_2_ES = unidecode(GoogleTranslator(source = "fr", target = "es").translate(word_2_FR))
+    word_2_IT = unidecode(GoogleTranslator(source = "fr", target = "it").translate(word_2_FR))
+    word_2_DE = unidecode(GoogleTranslator(source = "fr", target = "de").translate(word_2_FR))
+    word_2_NL = unidecode(GoogleTranslator(source = "fr", target = "nl").translate(word_2_FR))
 
     colu1, colu2, colu3, colu4, colu5 = st.columns(5)
 
@@ -77,7 +77,7 @@ with colu2:
         st.write("🇳🇱 NL 🇳🇱")
         st.code(str(word_2_NL).lower())
 
-    liste_2 = [word_2_FR.lower(), word_2_EN.lower(), word_2_ES.lower(), word_2_IT.lower(), word_2_DE.lower(), word_2_NL.lower()]
+    liste_2 = [unidecode(word_2_FR).lower(), word_2_EN.lower(), word_2_ES.lower(), word_2_IT.lower(), word_2_DE.lower(), word_2_NL.lower()]
 
     unique_liste_2 = list(set(liste_2))
 
