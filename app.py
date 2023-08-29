@@ -1,6 +1,8 @@
 import streamlit as st
 from deep_translator import GoogleTranslator
+from unidecode import unidecode
 import pandas as pd
+
 
 st.set_page_config(page_title = "Translation to Regex",
                    page_icon = ":fox:",
@@ -13,11 +15,11 @@ col1, colu2 = st.columns(2)
 with col1:
     word_1_FR = st.text_input("🇫🇷 FR First Word 🇫🇷", value = "chocolat")
 
-    word_1_EN = GoogleTranslator(source = "fr", target = "en").translate(word_1_FR)
-    word_1_ES = GoogleTranslator(source = "fr", target = "es").translate(word_1_FR)
-    word_1_IT = GoogleTranslator(source = "fr", target = "it").translate(word_1_FR)
-    word_1_DE = GoogleTranslator(source = "fr", target = "de").translate(word_1_FR)
-    word_1_NL = GoogleTranslator(source = "fr", target = "nl").translate(word_1_FR)
+    word_1_EN = unidecode(GoogleTranslator(source = "fr", target = "en").translate(word_1_FR))
+    word_1_ES = unidecode(GoogleTranslator(source = "fr", target = "es").translate(word_1_FR))
+    word_1_IT = unidecode(GoogleTranslator(source = "fr", target = "it").translate(word_1_FR))
+    word_1_DE = unidecode(GoogleTranslator(source = "fr", target = "de").translate(word_1_FR))
+    word_1_NL = unidecode(GoogleTranslator(source = "fr", target = "nl").translate(word_1_FR))
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
