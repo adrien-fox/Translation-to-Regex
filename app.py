@@ -29,7 +29,7 @@ if navigation == "2-Words Combination Translator" :
     col1, colu2 = st.columns(2)
 
     with col1:
-        word_1_FR = st.text_input(value = "chocolat")
+        word_1_FR = st.text_input("🇫🇷 FR First Word 🇫🇷", value = "chocolat")
 
         word_1_EN = unidecode(GoogleTranslator(source = "fr", target = "en").translate(word_1_FR))
         word_1_ES = unidecode(GoogleTranslator(source = "fr", target = "es").translate(word_1_FR))
