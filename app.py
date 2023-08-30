@@ -171,22 +171,27 @@ if navigation == "Multiple Words Translator":
         col1, col2, col3, col4, col5, col6 = st.columns(6)
         with col1 : 
           st.markdown("🇫🇷 FR 🇫🇷")
-          words_1_input = st.text_input("Enter 1 word", value = "citron")
+          words_1_input = st.text_input("Enter first word", value = "citron")
         with col2 : 
           st.markdown("🇬🇧 EN 🇬🇧")
           words_1_EN = unidecode(GoogleTranslator(source = "fr", target = "en").translate(words_1_input)).lower()
+          st.code(words_1_EN)
         with col3 : 
           st.markdown("🇩🇪 DE 🇩🇪")
           words_1_DE = unidecode(GoogleTranslator(source = "fr", target = "de").translate(words_1_input)).lower()
+          st.code(words_1_DE)
         with col4 : 
           st.markdown("🇪🇸 ES 🇪🇸")
           words_1_ES = unidecode(GoogleTranslator(source = "fr", target = "es").translate(words_1_input)).lower()
+          st.code(words_1_ES)
         with col5 : 
           st.markdown("🇮🇹 IT 🇮🇹")
           words_1_IT = unidecode(GoogleTranslator(source = "fr", target = "it").translate(words_1_input)).lower()
+          st.code(words_1_IT)
         with col6 : 
           st.markdown("🇳🇱 NL 🇳🇱")
           words_1_NL = unidecode(GoogleTranslator(source = "fr", target = "nl").translate(words_1_input)).lower()
+          st.code(words_1_NL)
           
         
         
