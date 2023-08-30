@@ -169,22 +169,22 @@ if navigation == "Multiple Words Translator":
 
         st.header("Words 1")
         col1, col2, col3, col4, col5, col6 = st.columns(6)
-        wit col1 : 
+        with col1 : 
           st.markdown("🇫🇷 FR 🇫🇷")
           words_1_input = st.text_input("Enter 1 word", value = "citron")
-        wit col2 : 
+        with col2 : 
           st.markdown("🇫🇷 FR 🇫🇷")
           words_1_input = st.text_input("Enter 1 word", value = "citron")
-        wit col3 : 
+        with col3 : 
           st.markdown("🇫🇷 FR 🇫🇷")
           words_1_input = st.text_input("Enter 1 word", value = "citron")
-        wit col4 : 
+        with col4 : 
           st.markdown("🇫🇷 FR 🇫🇷")
           words_1_input = st.text_input("Enter 1 word", value = "citron")
-        wit col5 : 
+        with col5 : 
           st.markdown("🇫🇷 FR 🇫🇷")
           words_1_input = st.text_input("Enter 1 word", value = "citron")
-        wit col6 : 
+        with col6 : 
           st.markdown("🇫🇷 FR 🇫🇷")
           words_1_input = st.text_input("Enter 1 word", value = "citron")
           
