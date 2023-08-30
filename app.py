@@ -168,7 +168,6 @@ if navigation == "Multiple Words Translator":
             st.markdown("---")
 
         
-        st.markdown("---")
         st.markdown("All Unique Translated Regex")
         unique_words_input_list_translated = list(set(words_input_list_translated))
         st.code("(" + "|".join(unique_words_input_list_translated) + ")")
