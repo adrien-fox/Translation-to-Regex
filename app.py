@@ -167,28 +167,33 @@ if navigation == "Multiple Words Translator":
         unique_words_input_list_translated = list(set(words_input_list_translated))
         st.code("(" + "|".join(unique_words_input_list_translated) + ")")
 
-        st.header("Words 1")
-        col1, col2, col3, col4, col5, col6 = st.columns(6)
+        col1, col2 = st.columns(2)
         with col1 : 
+          st.header("Words 1")
+
+        with col2: 
           st.markdown("🇫🇷 FR 🇫🇷")
           words_1_input = st.text_input("Enter first word", value = "citron")
-        with col2 : 
+          
+        col1, col2, col3, col4, col5 = st.columns(5)
+
+        with col1 : 
           st.markdown("🇬🇧 EN 🇬🇧")
           words_1_EN = unidecode(GoogleTranslator(source = "fr", target = "en").translate(words_1_input)).lower()
           st.code(words_1_EN)
-        with col3 : 
+        with col2 : 
           st.markdown("🇩🇪 DE 🇩🇪")
           words_1_DE = unidecode(GoogleTranslator(source = "fr", target = "de").translate(words_1_input)).lower()
           st.code(words_1_DE)
-        with col4 : 
+        with col3 : 
           st.markdown("🇪🇸 ES 🇪🇸")
           words_1_ES = unidecode(GoogleTranslator(source = "fr", target = "es").translate(words_1_input)).lower()
           st.code(words_1_ES)
-        with col5 : 
+        with col4 : 
           st.markdown("🇮🇹 IT 🇮🇹")
           words_1_IT = unidecode(GoogleTranslator(source = "fr", target = "it").translate(words_1_input)).lower()
           st.code(words_1_IT)
-        with col6 : 
+        with col5 : 
           st.markdown("🇳🇱 NL 🇳🇱")
           words_1_NL = unidecode(GoogleTranslator(source = "fr", target = "nl").translate(words_1_input)).lower()
           st.code(words_1_NL)
