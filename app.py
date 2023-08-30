@@ -160,6 +160,7 @@ if navigation == "Multiple Words Translator":
                 st.code(words_IT)
             with colu6 : 
                 st.code(words_NL)
+            st.code(words_FR + "|" + words_EN + "|" + words_DE + "|" + words_ES + "|" + words_IT + "|" + words_NL)
         
         st.markdown("Unique Translated Regex")
         unique_words_input_list_translated = list(set(words_input_list_translated))
