@@ -167,13 +167,10 @@ if navigation == "Multiple Words Translator":
         unique_words_input_list_translated = list(set(words_input_list_translated))
         st.code("(" + "|".join(unique_words_input_list_translated) + ")")
 
-        col1, col2 = st.columns(2)
-        with col1 : 
-          st.header("Words 1")
+        st.header("Words 1")
 
-        with col2: 
-          st.markdown("🇫🇷 FR 🇫🇷")
-          words_1_input = st.text_input("Enter first word", value = "citron")
+        st.markdown("🇫🇷 FR 🇫🇷")
+        words_1_input = st.text_input("Enter first word", value = "citron")
           
         col1, col2, col3, col4, col5 = st.columns(5)
 
@@ -205,7 +202,6 @@ if navigation == "Multiple Words Translator":
         st.code(words_1_list)
         st.write("Regex")
         st.code("(" + "|".join(unique_words_1_list) + ")")
-        st.code("\b(" + "|".join(unique_words_1_list) + ")\b")
           
         
         
