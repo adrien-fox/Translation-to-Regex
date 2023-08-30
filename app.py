@@ -161,7 +161,33 @@ if navigation == "Multiple Words Translator":
             with colu6 : 
                 st.code(words_NL)
             st.code(words_FR + "|" + words_EN + "|" + words_DE + "|" + words_ES + "|" + words_IT + "|" + words_NL)
+
         
         st.markdown("Unique Translated Regex")
         unique_words_input_list_translated = list(set(words_input_list_translated))
         st.code("(" + "|".join(unique_words_input_list_translated) + ")")
+
+        st.header("Words 1")
+        col1, col2, col3, col4, col5, col6 = st.columns(6)
+        wit col1 : 
+          st.markdown("🇫🇷 FR 🇫🇷")
+          words_1_input = st.text_input("Enter 1 word", value = "citron")
+        wit col2 : 
+          st.markdown("🇫🇷 FR 🇫🇷")
+          words_1_input = st.text_input("Enter 1 word", value = "citron")
+        wit col3 : 
+          st.markdown("🇫🇷 FR 🇫🇷")
+          words_1_input = st.text_input("Enter 1 word", value = "citron")
+        wit col4 : 
+          st.markdown("🇫🇷 FR 🇫🇷")
+          words_1_input = st.text_input("Enter 1 word", value = "citron")
+        wit col5 : 
+          st.markdown("🇫🇷 FR 🇫🇷")
+          words_1_input = st.text_input("Enter 1 word", value = "citron")
+        wit col6 : 
+          st.markdown("🇫🇷 FR 🇫🇷")
+          words_1_input = st.text_input("Enter 1 word", value = "citron")
+          
+        
+        
+        
