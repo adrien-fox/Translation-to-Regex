@@ -160,48 +160,16 @@ if navigation == "Multiple Words Translator":
                 st.code(words_IT)
             with colu6 : 
                 st.code(words_NL)
-            st.code(words_FR + "|" + words_EN + "|" + words_DE + "|" + words_ES + "|" + words_IT + "|" + words_NL)
+
+            words_list = [words_FR, words_EN, words_DE, words_ES, words_IT, words_NL]
+            words_list_unique = list(set(words_list))
+            st.write("Unique Translated Regex")
+            st.code("(" + "|".join(words_list_unique) + ")")
 
         
-        st.markdown("Unique Translated Regex")
+        st.markdown("All Unique Translated Regex")
         unique_words_input_list_translated = list(set(words_input_list_translated))
         st.code("(" + "|".join(unique_words_input_list_translated) + ")")
-
-        st.header("Words 1")
-
-        st.markdown("🇫🇷 FR 🇫🇷")
-        words_1_input = st.text_input("Enter first word", value = "citron")
-          
-        col1, col2, col3, col4, col5 = st.columns(5)
-
-        with col1 : 
-          st.markdown("🇬🇧 EN 🇬🇧")
-          words_1_EN = unidecode(GoogleTranslator(source = "fr", target = "en").translate(words_1_input)).lower()
-          st.code(words_1_EN)
-        with col2 : 
-          st.markdown("🇩🇪 DE 🇩🇪")
-          words_1_DE = unidecode(GoogleTranslator(source = "fr", target = "de").translate(words_1_input)).lower()
-          st.code(words_1_DE)
-        with col3 : 
-          st.markdown("🇪🇸 ES 🇪🇸")
-          words_1_ES = unidecode(GoogleTranslator(source = "fr", target = "es").translate(words_1_input)).lower()
-          st.code(words_1_ES)
-        with col4 : 
-          st.markdown("🇮🇹 IT 🇮🇹")
-          words_1_IT = unidecode(GoogleTranslator(source = "fr", target = "it").translate(words_1_input)).lower()
-          st.code(words_1_IT)
-        with col5 : 
-          st.markdown("🇳🇱 NL 🇳🇱")
-          words_1_NL = unidecode(GoogleTranslator(source = "fr", target = "nl").translate(words_1_input)).lower()
-          st.code(words_1_NL)
-
-
-        words_1_list = [words_1_input, words_1_EN, words_1_DE, words_1_ES, words_1_IT, words_1_NL]
-        unique_words_1_list = list(set(words_1_list))
-        st.write("Unique translation")
-        st.code(words_1_list)
-        st.write("Regex")
-        st.code("(" + "|".join(unique_words_1_list) + ")")
           
         
         
