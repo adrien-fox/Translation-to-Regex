@@ -192,6 +192,15 @@ if navigation == "Multiple Words Translator":
           st.markdown("🇳🇱 NL 🇳🇱")
           words_1_NL = unidecode(GoogleTranslator(source = "fr", target = "nl").translate(words_1_input)).lower()
           st.code(words_1_NL)
+
+
+        words_1_list = [words_1_input, words_1_EN, words_1_DE, words_1_ES, words_1_IT, words_1_NL]
+        unique_words_1_list = list(set(words_1_list))
+        st.write("Unique translation")
+        st.code(words_1_list)
+        st.write("Regex")
+        st.code("(" + "|".join(unique_words_1_list) + ")")
+        st.code("\b(" + "|".join(unique_words_1_list) + ")\b")
           
         
         
