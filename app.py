@@ -63,7 +63,7 @@ if navigation == "2-Words Combination Translator" :
         st.code(unique_liste_1)
         st.write("Regex")
         regex_1 = "(" + "|".join(unique_liste_1) + ")"
-        regex_input_1 = st.text_input("Optimize your Regex here", value = sorted.(regex_1))
+        regex_input_1 = st.text_input("Optimize your Regex here", value = sorted(regex_1))
 
 
 
