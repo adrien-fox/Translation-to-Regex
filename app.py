@@ -61,7 +61,6 @@ if navigation == "2-Words Combination Translator" :
 
         st.write("Unique translation")
         st.code(unique_liste_1)
-        st.write("Regex")
         regex_1 = "(" + "|".join(sorted(unique_liste_1)) + ")"
         regex_input_1 = st.text_input("Optimize your Regex here", value = regex_1)
 
@@ -101,11 +100,11 @@ if navigation == "2-Words Combination Translator" :
 
         st.write("Unique translation")
         st.code(unique_liste_2)
-        st.write("Regex")
-        st.code("(" + "|".join(unique_liste_2) + ")")
+        regex_2 = "(" + "|".join(sorted(unique_liste_2)) + ")"
+        regex_input_2 = st.text_input("Optimize your Regex here", value = regex_2)
 
-    st.write("Final Combination Regex")
-    st.code("(" + "|".join(unique_liste_1) + ").*(" + "|".join(unique_liste_2) + ")|(" + "|".join(unique_liste_2) + ").*(" + "|".join(unique_liste_1) + ")")
+    if st.button("Create Final Combination Regex") : 
+        st.code("(" + "|".join(regex_input_1) + ").*(" + "|".join(regex_input_2) + ")|(" + "|".join(regex_input_2) + ").*(" + "|".join(regex_input_1) + ")")
 
 if navigation == "Multiple Words Translator":
 
