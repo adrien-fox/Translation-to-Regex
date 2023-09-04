@@ -104,7 +104,7 @@ if navigation == "2-Words Combination Translator" :
         regex_input_2 = st.text_input("Optimize your Regex here", value = regex_2)
 
     if st.button("Create Final Combination Regex") : 
-        st.code("(" + "|".join(regex_input_1) + ").*(" + "|".join(regex_input_2) + ")|(" + "|".join(regex_input_2) + ").*(" + "|".join(regex_input_1) + ")")
+        st.code(regex_input_1 + ".*" + regex_input_2 + "|" + regex_input_2 + ".*" + regex_input_1)
 
 if navigation == "Multiple Words Translator":
 
