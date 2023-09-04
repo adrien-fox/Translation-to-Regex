@@ -62,7 +62,9 @@ if navigation == "2-Words Combination Translator" :
         st.write("Unique translation")
         st.code(unique_liste_1)
         st.write("Regex")
-        st.code("(" + "|".join(unique_liste_1) + ")")
+        regex_1 = "(" + "|".join(unique_liste_1) + ")"
+        regex_input_1 = st.text_input("Optimize your Regex here", value = regex_1)
+
 
 
 
